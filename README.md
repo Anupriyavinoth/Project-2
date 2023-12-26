@@ -23,12 +23,20 @@ Introduction:
 Project Requirments:
 
 Python
+
 Json
+
 Streamlit
+
 Pandas
+
 GitHub Cloning 
+
 Requests
+
 Psycopg2
+
 Plotly
+
 
 LinkedIn: 
