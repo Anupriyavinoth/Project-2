@@ -22,13 +22,13 @@ Introduction:
      
 Project Requirments:
 
-1.Python
-2.Json
-3.Streamlit
-4.Pandas
-5.GitHub Cloning 
-6.Requests
-7.Psycopg2
-8.Plotly
+Python
+Json
+Streamlit
+Pandas
+GitHub Cloning 
+Requests
+Psycopg2
+Plotly
 
 LinkedIn: 
