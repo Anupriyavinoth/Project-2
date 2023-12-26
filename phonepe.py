@@ -21,14 +21,12 @@ mydb = psycopg2.connect(host = "localhost",
                         )
 cursor = mydb.cursor()
 
-
 #Aggregated_transsaction
 
 cursor.execute("select * from aggregated_transaction")
 mydb.commit()
 table1 = cursor.fetchall()
 Aggre_trans = pd.DataFrame(table1,columns = ("States", "Years", "Quarter", "Transaction_type", "Transaction_count", "Transaction_amount"))
-
 
 #Aggregated_user
 cursor.execute("select * from aggregated_user")
@@ -55,13 +53,11 @@ mydb.commit()
 table5 = cursor.fetchall()
 Top_trans = pd.DataFrame(table5,columns = ("States", "Years", "Quarter", "Pincodes", "Transaction_count", "Transaction_amount"))
 
-
 #Top_user
 cursor.execute("select * from top_user")
 mydb.commit()
 table6 = cursor.fetchall()
 Top_user = pd.DataFrame(table6, columns = ("States", "Years", "Quarter", "Pincodes", "RegisteredUser"))
-
 
 def animate_all_amount():
     url = "https://gist.githubusercontent.com/jbrobst/56c13bbbf9d97d187fea01ca62ea5112/raw/e388c4cae20aa53cb5090210a42ebb9b765c0a36/india_states.geojson"
@@ -90,8 +86,7 @@ def animate_all_amount():
     fig_tra.update_geos(fitbounds= "locations", visible =False)
     fig_tra.update_layout(width =600, height= 700,title_font= {"size":25})
     return st.plotly_chart(fig_tra)
-    
-    
+        
 def payment_count():
     attype= Aggre_trans[["Transaction_type", "Transaction_count"]]
     att1= attype.groupby("Transaction_type")["Transaction_count"].sum()
@@ -131,7 +126,6 @@ def animate_all_count():
     fig_tra.update_geos(fitbounds= "locations", visible= False)
     fig_tra.update_layout(width= 600, height= 700,title_font={"size":25})  
     return st.plotly_chart(fig_tra)
-
 
 def payment_amount():
     attype= Aggre_trans[["Transaction_type","Transaction_amount"]]
@@ -181,7 +175,6 @@ def transaction_amount_year(sel_year):
     fig_atay.update_layout(title_font= {"size":25})
     return st.plotly_chart(fig_atay)         
 
-
 def payment_count_year(sel_year):
     year= int(sel_year)
     apc= Aggre_trans[["Transaction_type", "Years", "Transaction_count"]]
@@ -219,7 +212,6 @@ def transaction_count_year(sel_year):
     fig_atcy.update_layout(width=600, height= 700)
     fig_atcy.update_layout(title_font={"size":25})
     return st.plotly_chart(fig_atcy)
-
 
 def payment_amount_year(sel_year):
     year= int(sel_year)
@@ -276,7 +268,6 @@ def ques2():
                     color_discrete_sequence= px.colors.sequential.Oranges_r)
     return st.plotly_chart(fig_lts)
 
-
 def ques3():
     htd= Map_trans[["Districts", "Transaction_amount"]]
     htd1= htd.groupby("Districts")["Transaction_amount"].sum().sort_values(ascending=False)
@@ -331,7 +322,6 @@ def ques8():
                     color_discrete_sequence= px.colors.sequential.Magenta_r)
     return st.plotly_chart(fig_st)
 
-
 def ques9():
     ht= Aggre_trans[["States", "Transaction_amount"]]
     ht1= ht.groupby("States")["Transaction_amount"].sum().sort_values(ascending= False)
@@ -339,7 +329,6 @@ def ques9():
     fig_lts= px.bar(ht2, x= "States", y= "Transaction_amount",title= "HIGHEST TRANSACTION AMOUNT and STATES",
                     color_discrete_sequence= px.colors.sequential.Oranges_r)
     return st.plotly_chart(fig_lts)
-
 
 def ques10():
     dt= Map_trans[["Districts", "Transaction_amount"]]
@@ -350,7 +339,7 @@ def ques10():
                 color_discrete_sequence= px.colors.sequential.Mint_r)
     return st.plotly_chart(fig_dt)
 
-
+#Streamlit Part
     
 st.set_page_config(layout= "wide")
 
@@ -423,10 +412,8 @@ with tab1:
         video_url = "https://youtu.be/aXnNA4mv1dU?si=WYA0iMunvWvwxS4j"
         st.video(video_url)
         
-
 with tab2:
-    
-    
+   
     sel_year = st.selectbox(":violet[Select the Year]",("All", "2018", "2019", "2020", "2021", "2022", "2023"))
     if sel_year == "All" :
         col1, col2 = st.columns(2)
@@ -474,9 +461,7 @@ with tab2:
                                                 'uttarakhand', 'west-bengal'))
             reg_state_all_RU(sel_year,state)
             reg_state_all_TA(sel_year,state)
-           
-            
-
+                       
 with tab3:
     
     
