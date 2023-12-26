@@ -38,4 +38,4 @@ Psycopg2
 Plotly
 
 
-LinkedIn: 
+**LinkedIn:** 
