@@ -1,13 +1,13 @@
-PHONEPE PULSE DATA VISUALIZATION AND EXPLORATION
+# PHONEPE PULSE DATA VISUALIZATION AND EXPLORATION
 
 
 
-INTRODUCTION:
+**INTRODUCTION**:
 
     PhonePe has become one of the most popular digital payment platforms in India, with millions of users relying on it for their day-to-day transactions. The app is known for its simplicity, user-friendly interface, and fast and secure payment processing. It has also won several awards and accolades for its innovative features and contributions to the digital payments industry.
     The aim of this project is to develop a solution that extracts, transforms, and visualizes data from the Phonepe Pulse GitHub repository. 
     
-PROCESS INVOLVES:
+**PROCESS INVOLVES:**
 
     Data Extraction: Scripting to clone the repository and collect data.
 
@@ -19,7 +19,7 @@ PROCESS INVOLVES:
 
     Data Retrieval: Fetching data from the database to dynamically update the dashboard.
 
-PROJECT REQUIREMENTS:
+**PROJECT REQUIREMENTS:**
 
 Python
 
