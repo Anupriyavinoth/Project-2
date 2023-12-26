@@ -21,21 +21,21 @@
 
 **PROJECT REQUIREMENTS:**
 
-Python
+1.Python
 
-Json
+2.Json
 
-Streamlit
+3.Streamlit
 
-Pandas
+4.Pandas
 
-GitHub Cloning 
+5.GitHub Cloning 
 
-Requests
+6.Requests
 
-Psycopg2
+7.Psycopg2
 
-Plotly
+8.Plotly
 
 
 **LinkedIn:** https://www.linkedin.com/in/anu-priya-930359295/
